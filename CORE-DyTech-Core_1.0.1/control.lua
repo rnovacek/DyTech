@@ -55,6 +55,9 @@ game.onload(function()
 end)
 
 game.onevent(defines.events.ontick, function(event)
+	if game.players ~= nil then
+	  return
+	end
 	if not DyTechOnInit then
 		if resin==false then
 			game.players[1].insert{name="resin",count=1}
